@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >//垂直线性布局
+
+    //表格布局，3行2列
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:text="@string/subject" />
+
+            <EditText
+                android:id="@+id/subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+           
+        </TableRow>
+
+        <TableRow>
+
+            <TextView                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:text="@string/body" />
+
+            <EditText
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:minLines="4"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/chooseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chooseDate"/>
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:editable="false"/>
+
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:gravity="center_horizontal">"
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add" />
+
+            <Button
+                android:id="@+id/query"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/query" />
+
+        </LinearLayout>
+
+    </TableLayout>
+
+    //需要动态设置属性，所以添加id
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        //强制制定好的样式
+        <TextView
+            style="@style/TextView"
+            android:layout_width="40dp"
+            android:textColor="#000000"
+            android:text="@string/num" />
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="50dp"
+            android:textColor="#000000"
+            android:text="@string/subject" />
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="110dp"
+            android:textColor="#000000"
+            android:text="@string/body" />
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="100dp"
+            android:textColor="#000000"
+            android:text="@string/date" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>
